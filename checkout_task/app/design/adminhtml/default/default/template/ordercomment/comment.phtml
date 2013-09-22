@@ -1,0 +1,23 @@
+<?php 
+$order=Mage::registry('current_order');
+$check = Mage::getSingleton('admin/session', array('username'=>'admin')); //get admin sessions
+// $roleId = implode('', Mage::getSingleton('admin/session')->getUser()->getRoles());
+// $roleName = Mage::getModel('admin/roles')->load($roleId)->getRoleName();
+// if($roleName == 'Administrators'){}
+
+if($check->isLoggedIn()) { //check is admin logged in
+?>
+<div class="box-right entry-edit" style="float:left;">
+	<div class="entry-edit">
+		<div class="entry-edit-head">
+			<h4 class="icon-head head-shipping-method">
+				<?php echo $this->__('Order comment') ?>
+			</h4>
+		</div>
+		<fieldset>
+			<?php 
+			echo $order->getComment() ? $order->getComment() : $this->__("No comment");?>
+		</fieldset>
+	</div>
+</div>
+<?php } ?>

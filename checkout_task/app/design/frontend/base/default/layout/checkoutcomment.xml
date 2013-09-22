@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<layout version="0.1.0">
+<!-- 
+Call  $this->getChildHtml('comment')
+in template/checkout/onepage/shipping_method.phtml
+ -->
+    <checkout_onepage_index>
+       <reference name="checkout.onepage.shipping_method">
+           <block type="checkoutcomment/checkout_comment" name="comment"  template="checkoutcomment/checkout/comment.phtml" />
+        </reference>
+    </checkout_onepage_index>
+</layout>

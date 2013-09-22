@@ -1,0 +1,26 @@
+ <?php 
+ /*
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2013 Zuhra Ujkanovic
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<form action="" id="checkout-agreements" onsubmit="return false;">
+    <div class="buttons-set">
+        <ul class="form-list">
+            <li>
+                <fieldset>
+                    <ul>
+                        <li class="wide">
+                            <label for="checkoutcomment-comment"><?php echo Mage::helper('checkoutcomment')->__('Add some checkout comment') ?></label>
+                            <div class="input-box">
+                                <textarea id="checkoutcomment-comment" class="input-text validation-passed" name="checkoutcomment[comment]" title="<?php echo $this->__('Checkout Comment') ?>" rows="5" cols="5"></textarea>
+                            </div>
+                        </li>
+                    </ul>
+                </fieldset>
+            </li>
+        </ul>
+    </div>
+</form>
